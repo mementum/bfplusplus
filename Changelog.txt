@@ -1,0 +1,547 @@
+1.05
+-- Modifications to comply with vendor policies
+
+1.04
+-- Corrected packaging issue for setup and executable in 1.03
+
+1.03
+-- Virtual Prices re-implemented to resolve rounding errors and wrong display (Closes issue #7)
+-- Solved Bet Placement issue if Market Data auto-loading had been disabled (Closes issue #8)
+-- Race times in event tree did not show the correct time. Time not adjusted to local timezone (Closes issue #9)
+-- Updated to BfPy 1.11
+-- Updated to HttxLib 0.97
+-- Added icons for Athletics and Fishing (Closes issue #10)
+-- Cancel All Bets in a Market uses cancelBetsByMarket if using the Bf Verified Edition (Closes issue #11)
+
+1.02
+-- Virtual Prices (ala web-site) implemented
+
+1.01
+-- Changes to display of market information to avoid possible unicode errors in languages other than English (Resolves Issue #1)
+-- Changed right-click logic for "Keep In-Play" (Resolves Issue #2)
+-- Corrected "daylight" calculation and now using "utcoffset" in BfPy (Resolves Issue #3)
+-- Corrected AsianLineId sending to ensure right-click betting for Asian Markets works (Resolves Issue #4)
+
+1.00
+-- Verified release
+-- Dialog added enabled redirection to Bfplusplus site for Betfair verification process
+
+0.50
+-- Updated to BfPy 1.02
+-- Updated to HttxLib 0.95
+-- Added icon for Olympics 2012
+-- Funds refresh button activated on app start if needed
+
+0.49
+-- Updated to BfPy 1.01 and using the Full DirectAPI
+-- Data Counter implementation from BfPy in use
+-- Updated to HttxLib 0.94 (along with BfPy 1.01) that adds the "Connection: Keep-Alive" header possiblity (and activated)
+
+0.48
+-- Improved profit/loss presentation in asian handicap markets
+
+0.47
+-- Corrected bug in context menu presentation in the market tree when the click happened on no market item
+-- Right-Click "stake is liability" actual value sent to Betfair corrected
+-- Show Funds state now saved across sessions to make initial funds retrieval consistent with the user desired state
+-- Added icon for Netball
+-- Ensured UpdateChecker is always imported into the executable
+
+0.46
+-- Added pyinstaller pubsub hook for right executable creation (pubsub modifies the module loading path)
+-- Improved username storage and retrieval
+
+0.45
+-- Explicit dialog confirmation to remember usernames with default action not to
+-- Ensure "data charges" requests remain at a maximum of 20 per second in any case
+-- Changed proxy activation logic before login
+-- Added pre-start update checker dialog that supports needed updates for verification (serious bug, API changes)
+-- Added User-Agent string for API calls to identify the application
+-- Funds autoupdate if "Show" is selected
+-- Possibility to have current bets to auto update
+-- Market tree expansion for Australian Markets (no event hierarchy)
+-- Code to restore main frame when an overlay ("closed" or others) had been shown during iconized mode
+
+0.44
+-- Change: Upgraded BfPy to 0.81
+-- Feature: AllMarkets information may now be forced to be reloaded manually and the last update is displayed
+-- Feature: Price evolution graphic can now be displayed by double-clicking the runner names
+
+0.43
+-- Bug [Fixed]: PlaceBet dialog could not allow to set keep in-play bets
+-- Bug [Fixed]: Fixed daylight saving adjustments for markets in the "search tab"
+
+0.42
+-- Change: Focus and click handling in Transient and Overlay windows to try to improve behaviour under MacOSX
+
+0.41
+-- Bug [Fixed]: Commonwealth Games icon was giving a problem under OSX
+-- Change: Corrected Chess id to display an icon and added icon for bowling
+-- Change: Some other changes to the UI to get a better feeling under OSX and Linux with small screens (they usually have larger fonts than Windows)
+-- Change: OptionButton's ReleaseMouse was being called, but MacOS had already released the mouse
+-- Change: Reposition of overlays made after UI refresh on panel hide/show
+
+0.40
+-- Bug [Fixed]: ticks away for bets were being applied even if the checkbox was off
+-- Change: Fixed size of left panel to avoid scrolling activation on right panel after hiding/showing left panel with markets loaded
+
+0.39
+-- Change: Removed main splitter and fixed left-panel size
+-- Feature: check for updates (and on start if wished)
+-- Change: smaller changes to improve a fixed size on start
+
+0.38
+-- Change: Threading pool to communicate with the Betfair API
+-- Feature: Excel market logging added to Modules
+-- Feature: left panel can be hidden to work in smaller displays
+-- Change: guard ticks for network traffic reduction controlled through spin now
+-- Feature: bets can be prepared/sent x ticks away from the betting price
+-- Feature: compensations can also be prepared/sent x ticks away from the price
+-- Feature: optimized space and presentation, the app should be usable in 800x600
+-- Change: quick stakes controlled through a pull down menu besides the display button
+-- Change: quick stakes and right-click stakes unified
+-- Bug [Fixed]: leftover from new BfPy - TransferFunds was not working
+-- Change: transfer funds interface reworked
+-- Change: icon is now displayed in the taskbar and top-left corner
+-- Change: name changed everywhere to Bfplusplus (BF++ is a C++ library)
+
+0.37
+-- Bug [Fixed]: Confirmation of market change when Stop bets are active was triggering an error
+-- Bug [Fixed]: Corrected indexing of stop bets that would not allow to manage more than one with the context menus
+-- Bug [Fixed]: Right-click lays in the market grid were not honouring the "Stake is Liability" flag
+-- Change: Removed all logging code from suds to add some speed-up (minimal)
+
+0.36
+-- Change: Horse & Greyhound races (and other events where time matters) display the time along with the name
+-- Feature: Added option to sort markets and events according to Betfair ordering
+-- Bug: Stopbets could trigger an error if the API throttle is exceeded
+-- Feature: Information added to events as context menu
+-- Feature: Information added in tabs with markets and runners
+
+0.35
+-- MacOS version working - patched suds in BfPy
+-- Updated: Imported version 0.78 of BfPy (redesigned)
+-- Change: Adaptations to BfPy
+-- Change: MarketTuple moved to the application from BfPy
+-- Change: Added a minStakes field retrieved after login from BfPy
+-- Bug [Fixed]: sleeping bug introduced in non-released 0.34
+-- Feature [New]: all markets is now loaded on a regular basis speeding up market search
+-- Change: Enter handling seems different in password field across OS if the event is skipped. Change behaviour.
+-- Change: All markets refresh period control moved out of pattern manager to Markets panel
+-- Bug [Fixed]: a compensation bet triggered an error with fillOrKill variables reference
+-- Change: Logic of fillOrKill bets. The global setting can be overriden in the call to place bets
+-- Bug [Fixed]: suds was not compensating for dst settings
+-- Change: Reordering of GUI, market info in Market Info tab, flags to identify wallet
+-- Feature: Right click bets have now their own "verify" setting linked to the master verify
+-- Change: Patterns can also be generated from a button
+-- Feature: Displayed in market will turn in play, is in play or will not along with the delay
+
+0.34
+-- Updated: Imported version 0.52 of BfPy
+-- Change: Adapt to GetMUBets change in BfPy that allows full control of the call
+-- Feature [New]: Scores where possible
+-- Change: Some threading improvements for non-bf threads
+-- Updated: Imported HttxLib to 0.93 to avoid HttxManager/HttxNetLocation cloning bug
+
+0.33
+-- Feature [New]: Hitting enter in the password control, invokes login
+-- Bug [Fixed]: Profit&Loss would not be redisplayed again (unless there had
+   been changes) if the checkbox was first unchecked and then re-checked
+-- Bug [Fixed]: Proxy (de)activation working again (leftover from refactoring)
+-- Bug [Fixed]: Proxy would not work on re-start (config was saved)
+-- Bug [Fixed]: With modules loaded but none selected, attempting to refresh
+   the Runners would generate an error
+-- Change: Added additional module unloading code - to be on the safe side
+-- Change: Nordic Factory icons manually edited and resized to 16x16. They look
+   better and should fix the initial application loading problem in MacOS
+-- Change: Some changes to threading. Removed a redundant login to the API
+-- Feature [New]: Tennis score displayed along matches
+-- Change: sport icons displayed according to id and not language name
+-- Change: Importing of beta functions (private in development) simplified and
+   moved mostly out of the way of normal code
+
+0.32
+-- Change: The General panel is again the main panel
+-- Change: Added links to Betfair, the Data Charges pages and Verification self test
+-- Change: Limit price request to 5 per second per market even with own Personal API
+-- Change: Added additional information to GAMBLING (tab and file) following the
+   Betfair Verification and Gambling Commission Guidelines
+
+0.31
+-- Change: Login button recovers the "default" status (lost on change to bitmap)
+-- Bug [Fixed]: Profit&Loss annotations bug on new annotation: Fixed
+-- Bug [Fixed]: The current bets "Load Market" bitmap button was being enabled
+   after deletion (side effect of how wxWidgets deletes a TreeCtrl)
+-- Feature [New]: Added control of "Auto Expand" of events
+-- Feature [New]: Added control of market cache
+-- Bug [Fixed]: Late "getAccountFunds" could be displayed even if show funds
+   had been unchecked
+-- Bug [Fixed]: Play functionality broken on Market Info load. Introduced in 0.30
+   when the LocalTimezone concept was introduced
+-- Feature[New]: Internal dynamic module importing (gui modules and record and play)
+   and suds location modified to have more standard import and therefore
+   to enable executable generation without compulsory 'py' source distribution
+   as pyinstaller can now identify all modules in use
+-- Feature [New]: Usernames are now encrypted to comply with Betfair requirements
+
+0.30
+-- Profit and Loss display update control algorithm to avoid unnecessary
+   displays
+-- If the non-Free-Api is being used refresh under 1sec are allowed
+-- Added a per-gui-module init function
+-- Re-ordered variable initialization into per-module init function
+   and some postLogin functions. Modularization increased
+-- Removed ObjectCache. No longer deepcopying wx items across threads
+-- Replaced __init__.py from record and play with internal import
+-- Removed typo that made play fail on start sometimes with some errors
+   although it played
+-- Pattern search results now ordered after time, last menu part, market
+-- Current Bets now display when they were last updated
+-- Registry initialization moved down to modules too
+-- Corrected bug: moving the compensate slider with no market loaded does
+   nothing (as expected)
+-- Unmatched bets now do also calculate profit and risk
+-- Stop Bet implementation
+-- Placebet log message indicates if a bet was placed with Fill or Kill
+-- Checked Python 2.7 compatibility (exe generation not supported by
+   (pyinstaller)
+-- Reordered funds display boxes to allow for larger quantities
+-- Changed the name to Bfplusplus (BfPlusPlus) everywhere
+-- The PlaceBet dialog supports fillOrKill now
+-- Fill bets will now be cancelled even if market is changed
+-- Added a Reload Funds button
+-- Wsdl files now loaded from string variables. Files removed from sources
+   accordingly
+-- Private (patched) copy of suds moved down to the betfair library
+-- Added icons
+-- Moved timezone/localtime calculations down to BfPy for coherence with
+   AllMarkets that already returns the times in local format. Added
+   a LocalTimezone (from Python docs) class to make the calculation generic
+   but until the next switch to winter time, it can't be checked
+-- Remove built-in modules as the directory may be read-only if the application
+   is installed by root/Administrator
+-- Corrected Market Suspended/Closed Colour registry entry
+-- Executables can now be constructed with the same dynamic import schemes still
+   with PyInstaller
+-- Windows setup script (InnoSetup) added and shell script to create exe
+-- Added README, LICENSE, LICENSE.LGPL, CREDITS and GAMBLING text files
+-- Added a rudimentary icon
+
+0.29
+-- Moved the Transient windows a panel down to avoid a "1-Click
+   Betting" possible concept
+-- Corrected odd behaviour when removing a menu item that was
+   causing the beta menu items to be displayed - wxPython bug
+-- Corrected transfer funds (left-over from a change from textCtrl
+   to staticTextCtrl)
+-- Added option to control loading of events right after login
+-- Changed textCtrl for Username to combox to allow multiple username
+   storage
+-- Remember username was incomplete. If a new name was added, the
+   checkbox needed to be unticked and ticked again. Now, names are saved
+   on "login" action, which is how it should be
+-- The multiple usernames can be managed with EditStringList
+-- Moved the "logging" tabs to the notebook holding market bets and
+   market info, removing cluttering from the interface
+-- Added successful completion log message on Transferfunds
+-- Range markets do not request Profit and Loss (the answer was
+   unsupported_market_type)
+-- Show Probability automatically disabled for range markets
+-- Improved login error reporting
+-- Fixed "Show Price %" for single selectionId Asian Market (football
+   ones) where the selectionIds are shared and "AsianId" is needed
+-- Corrected Overlay and Transient windows not moving when sash was
+   being repositioned
+-- Reimplemented current bets to a TreeControl per Exchange including
+   Modify bet (not only cancel)
+-- Added HTTP keepalive timeout to httxlib to restart connections
+   automatically (it was a case for connections to the Aus)
+-- Favourites/Saved page now stored to/fetched from the registry
+-- Restored "resize" flag for the whole frame
+-- Single click and context-menu stakes can be restored to defaults
+-- Events "reload-all" fixed after login
+-- Fixed transient-window focus over the "X" area
+-- Added the possibility to use specific Product Ids other than
+   the Free API
+
+0.28
+-- Added an option to exit after registry clean-up
+-- Choice Market history no longer disabled if it contains items
+   and the next market fails to load (example THROTTLE_EXCEEDED)
+-- Bug corrected in the profit and loss display for Asian Markets
+-- Asian Profit And Loss now displayed along several same "runners"
+   if possible to better read it
+-- Implemented actions for the modules (buttons to be pressed)
+
+0.27
+-- Mixed Load Patterns and Edit Patterns into a Pattern Manager
+   and reduced buttons and contex-menu entries
+
+0.26
+-- Edit "Single Click" stakes and contex menu stakes now are edited
+   through separate functions (name was being overwriten)
+-- Runners for Modules are not filled if no module is selected. This
+   happened only on "Module loading"
+-- The params and runners notebook is only active if modules are loaded
+-- Restored the play functionality by adapting it to the new module api
+-- Corrected behaviour of "single stakes" because the active one could
+   be deactivated
+-- Module logging now has a context menu - Clear Messages button removed
+-- Check/Uncheck All buttons for runners to pass to modules
+-- Context menu for pattern reload/editing/individual load
+
+0.25
+-- In 0.24 playback corrected after change to numerical values in csv
+-- Corrected the algorithm to change the number of runners on the fly
+-- Both Betting and Error log panels have working context menus now
+-- Market history shows the full path now
+-- If market is not loaded due to throttle exceeded, the blocking
+   transparent dialog is removed as soon as the answer is received
+-- Saved markets have now the full path
+-- Corrected bug in Optimize network
+-- Search pattern can be generated from the tree of events
+-- Pattern overwrite check move to the pattern edit dialog (where it
+   belonged)
+-- Reworked usage of main bfClient module to allow access from modules
+   with a threading lock to create objects (placebet, updatebet, ...)
+-- Api for modules to placebets and receive notification
+-- Module logging includes timestamping now
+-- Move "Record and Play" to a tab with System and User Modules given
+   their module nature and to regain space
+-- Adapted the "play" module to be compliant with the new module api
+   to access the bf object
+-- Runners and runners to act upon are now passed to modules
+-- Implemented hide/show betting bar
+-- Single click and stakes implemented in betting bar
+-- Stakes are editable (in grid market context menus and in betting bar)
+-- Implemented stake is liability for lays
+-- Implemented fillOrKill functionality
+-- Corrected CancelAllBets to only look to active bets
+-- Added transient message popup for errors and normal log messages
+-- Corrected bug in betfair invoke method erroCode checking
+-- Corrected the login error login in the gui to match the right logic
+   in the betfair library
+-- Renamed ProgressDialog and PlaceBetDialog to remove _t and Impl
+   suffixes
+-- Corrected a bug in httxlib response (isredirpostrfc2616)
+-- Reordered all files to directories
+-- Generalization of the LoadGUIModules to load for any frame/dialog
+   in the application object
+-- Correction of BfNetworkError printing to handle messages with
+   different number of "args" for the error
+-- Re-layout if the "compensate" slider reaches 100 to let display
+   correctly
+-- Changed "secs" to "ticks" for optimize traffic (really what it does)
+-- Possibly corrected a bug in compensation presentation (MinBet exact
+   value being left out)
+-- Added network problems indicator in the refresh time control
+-- More customizable colours: network indicator, market status, in play delay
+-- Content menu betting stakes are now editable
+-- EditStringList can now sort the values and reverse the order
+-- Module params can now have a list of things to be edited with EditStringList
+-- Implemented overlay message for Suspended/Closed status
+-- Used overlay to put Total amount matched in the grid
+-- Module runnerChoices fixed
+-- Implemented "Market Stop/Start"
+-- On Market closed, data transfer stops and screen is cleared
+-- Removed bettingbaractive references. Betting bar always on
+-- Restored individual market type field display
+-- Fill or Kill functionality for modules too
+-- Betting stakes editable from context menu in buttons
+-- Added a safeguard in httxtrans against 200 HTTP codes with non-xml content
+-- Disabled suds logging (sending to null handler)
+-- Compensations/Stake betting from context menu can now
+   go over the "Edit Stakes (enabled/disabled) to remove the what-if
+   from profit and loss
+-- Corrected enabling of events "reload all" which would not enable button
+   if first load failed (rendering impossible a load of the events)
+-- Changed Registry path to "BfBetBuddy/BfBetBuddy", removing
+   "Sensible Odds" along the way
+-- Reordered all files to fit into module directories. Now each GUI
+   item (frame, dialog) could load modules dynamically. All other things
+   move to reasonable directories, except the main program
+-- Changed Sensible Odds to Daniel Rodriguez in license everywhere
+-- Corrected bug in grid market, with context menus not working if prices
+   had not been loaded yet
+-- Users can force reload of "all markets" for favourite search
+-- Users can change the auto-refresh period of "all markets" for fav search
+
+0.24
+-- Corrected context-menu bug to show the menu the in the list of bets
+-- Removed "unhandled exception during interpreter shutdown" messages
+-- Recording does only store numeric values for market status along prices
+-- Colours are customizable for back, lay, matched, unmatched
+-- Search favourites patterns are now stored in and fetched from the
+   registry
+-- Favourites Search Pattern Editor
+-- Selection of favourites search pattern before favourites search
+-- Horizontal scroll bar for log messages window
+-- Moved market info from side notebook to a market notebook with 
+   market bets in another tab
+-- Corrected current bets auto-sizing (seems a bug in grid "AutoSize")
+-- Added current bets and module list to wheel-scrollable list
+-- Corrected a bug in proxy that would avoid saving to the registry
+-- Added editor and registry storage for the prioritized events in
+   the tree events
+-- Bug in slider compensate corrected. Not storing value in the registry
+-- Reimplemented context menus in sliders to make them easier to code
+-- The 'see error messages' logic was inverted. corrected
+-- See error messages removed (see below)
+-- Separated logging messages into betting and errors (removed "see
+   error")
+-- Added "postevent" logging messages for modules
+-- Modules have editable params now (with back to defaults if needed)
+-- Modules in two flavours: system (app provided) and user developed
+-- Reordered "general panel" ui elements
+-- Amalgamated number of runners/winners in a single text display
+-- Colours: now text colour can be chosen too
+-- Colours can be taken back to defaults
+-- Show profit & loss, prob, verify bets and compensate moved out
+   of bets panel to top right corner
+-- Control of market change if a module/record/play session is active
+-- Added optimize network with selectable guard time
+-- Added a "Clear registry" button
+-- Moved market info and list of bets to tabs under the market
+-- Playback works even if not logged in
+-- Corrected "enabled/disabled" elements during start-up
+-- Modules now receive an "api" object (so far only sendMessage and
+   logMessage are implemented) rather
+-- Modules now have a generic timeout
+-- Record and Play modules (although still fully separated) could
+   now be implemented as modules
+-- Modules feature a play/pause function now
+-- New dialogs to Edit Module Params and Search Patterns
+-- Removed currency from numbers (as prefix) and have it displayed
+   along general information at the top
+-- Prioritization of events can be edited now
+
+
+0.23
+-- Reimplemented Matched/Unmatched bets indexing and display algorithm
+   to only redisplay changes and not the whole control. No flickering
+   Much faster redisplay
+-- Removed parsing of ListCtrl to operate on Matched/Unmatched bets. Now
+   everything is done using the ClientData
+-- Calculation of compensation for mu bets. Relocation using
+   new bet indexing struct
+-- Removed extra backslash in saved markets for "Motor Sport" and others
+   where the path was very short
+-- Corrected saved markets "load single" market from context menu
+-- Changes to the compensation slider generate an immediate refresh
+   of compensations in prices and bets
+-- Changes in prices generate an immediate update of bets compensations
+   but only for those that have changed (marked as dirty)
+-- Changes in prices generate an immediate update of pnl compensations	
+   For all. This is non-optimal but the market grid does not show flickering
+   like the Listcontrol
+-- Updates to prices do also trigger immediate update of compensations
+-- Right-clicking on a bet in the main display selects it before showing
+   the contextual menu
+-- MinBet to display compensations is controlled at gui level. Compensations
+   are generated no matter what size
+-- Removed "try" from cancelbet and updatebet log messages
+-- Auto-refresh threads request information as fast as possible by only sleeping
+   the needed time until the next request (plus a 0.01 guard to avoid throttling)
+-- Changing the refresh timeout acts immediately on a thread waiting to refresh
+   (if the thread is waiting for network data, nothing will happen)
+-- LogMessages right-click menu customized with enabled/disabled elements
+-- Corrected registry load error at login time for some values
+-- Bet list context menu corrected. Still single selection
+-- Added human logging error messages for placebet, updatebet, cancelbet, getevents
+   and allmarkets
+-- BfModules working again with custom directory rather than app specific dir
+-- Record and Play functionality with gzip compression
+-- Clear registry button implemented
+
+0.22
+-- Australian funds loading again. Bug left over from file re-org
+-- The bet list will not show compensations if the amount is below the
+   minimum bet size
+-- Current (All) bets can now be filtered according to type (back/lay)
+   and status (matched/unmatched) or any combination of all
+-- Implementation of configuration storage for several parameters like
+   username, show prob, show PnL, Verify bets
+-- Market loading from favourites works again, after introducing a bug
+   when moving the favourites parsing code to a thread
+-- MarketPrices logging message bug corrected, leftover from text
+   correction
+-- Change funds display widgets from TextControls to StaticText
+-- HttxLib fully documented and corrected a cloning error in HttxNetLocation
+-- Improved https support in HttxLib with certificate support and
+   validation
+-- HttxLib is now a separate project
+-- CurrentBets now loads the bets for both the UK and Aus wallets
+-- CurrentBets now displays the betId too and can be filtered for UK and Aus
+-- Corrected display of probability for prices in multi-winner markets
+   where the probability is (approx) the inverse of the best back price
+   because the overround can't be calculated
+-- Added proxy settings to the values stored/fetched from/to the registry and
+   for the bet filters in the market (show/hide matched/unmatched/back/lay)
+-- Changed favourites from regular expressions to regular text search
+   with more options for negative, positive matches and market name matches
+   and speed has improved orders of magntide
+-- Restored market name column for favourites
+-- All Markets (source for favourites) is only re-loaded if older than 60 minutes
+-- Moved menupath creation code to bfobj/market.py as it should
+-- New "saved markets" feature implemented with registry storage
+-- Setting via a checkbox to see "exceptions" in the message window
+-- Moved deepcopy from messages to threads from the put action to the get action
+   and then disabled it to improve internal communication performance
+-- Added new scrollable windows (saved favourites, log messages) to the list
+   of windows to play with the focus
+
+0.21
+-- Proxy functionality working (tested with Fiddler locally)
+-- Removed out of sync UpdateMarket when changing to a new market that
+   was loading old MarketPrices info at least once more
+-- Added logging text field and logging code
+-- Improved (or so I believe) error detection in threads and gui
+-- Log messages window for bet placement functionality and errors
+-- Disabling of beta functionality in non-beta mode
+-- Exceptions re-worked to travel all the way up to the gui (if needed)
+-- Fixed multi-threading bug in Suds (by delaying 'binding' creation
+   down to 'binding' assignment
+-- re-location of files in the project, with subsequent changes to import
+-- isolated the betfair library from external imports
+-- httxtransport now passed to betfair client construction rather than being
+   built internally
+-- hack to re-place bets sent with IP to markets that will not not turn
+   in-play
+-- corrected multi-winner data presentation
+-- corrected multi-winner interpretation of compensate slider
+-- slider movement will update compensations in price grid and bets list
+-- gui modules are loaded directly (rather than through a lambda function)
+   in non-beta mode
+-- removed all print statements from non-beta version. only 1 in gui modules
+   loading to show exceptions
+-- moved betfair data storage objects to a module
+-- corrected PlaceBet compensation interaction with the main frame
+-- changed favourites file to a normal file removing the py extension
+-- expanding a market or calling it from current bets switches
+   the control panel to the market view
+-- changed main script to .pyw to prevent the console window from opening
+   now that there are no print statements
+-- A load module error in non-beta mode will report a dialog box with the
+   error and will cleanly exit
+-- Modules are loaded on instance creation, before binding events
+-- Move favourites processing to a thread to avoid ui locking
+
+0.20
+
+-- Many small changes to UI borders, padding and some element placement
+-- Corrected bug in ExpandEvents when the full hierarchy was not in placed
+-- Added "expansion" of tree nodes during ExpandEvents rather than only after
+   reaching the destination node
+-- All functions, even Event handlers, are now dynamically loaded by using
+   proxy lambda functions
+   This is needed because the event handling table holds a copy (ref) to the function
+   passed in Bind. The proxy now gets the real function from the object once called
+-- Added "Select" to treeEvents context mentu
+-- Removed treeItem.IsOk check from menu selections, since it was done before popping
+   up the menu
+-- Added a "total number of bets" text field to the "All bets" tab. This provides
+   feedback to the user when no bets exist in the exchange and during loading
+-- Restored the column creation code for the favourites
+-- Removed label for favourites and centered the load button to make it be the label
+-- Restored the favourites functionality. Favourites now expressed as a tuple
+   with a further sub-tuple as "or". Added overlay dialog during the load phase

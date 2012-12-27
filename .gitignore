@@ -1,0 +1,8 @@
+*.pyc
+*.pyo
+*~
+bin
+bfplusplus/betafunc.py
+bfplusplus/bfverification.py
+
+

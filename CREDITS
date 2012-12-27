@@ -1,0 +1,55 @@
+Bfplusplus has been developed using the following components, editors, utilities, operating systems and content:
+
+Python 2.6/2.7 (or later), a programming language that lets you work more quickly and integrate your systems more effectively. If you want to learn more about Python please visit <http://www.python.org>
+
+wxPython 2.8.11.0 (or later), a blending of the wxWidgets C++ class library with the Python programming language. If you want to learn more please visit <http://www.wxpython.org>
+
+wxFormBuilder 3.1.70 (or later), an OpenSource wxWidgets (C++, wxPython, XRC) Designer, GUI Builder, and RAD Tool. If you want to learn more please visit <http://wxformbuilder.org>
+
+bfpy 0.50 (or later), a Betfair communications library. If you want to learn more please visit <http://code.google.com/p/bfpy>
+
+suds 0.3.9 (or later), a lightweight SOAP python client for consuming Web Services. If you want to learn more please visit <https://fedorahosted.org/suds/>. suds may be embedded in bfpy
+
+httxlib 0.90 (or later), a HTTP library for Python. If you want to learn more please visit <http://code.google.com/p/httxlib>
+
+SlowAES (rev 38 or later), a implementations of AES in pure scripting languages. If you want to learn more please visit <http://code.google.com/p/slowaes/>
+
+PyInstaller 1.4 (or later), a program that converts (packages) Python programs into stand-alone executables. If you want to learn more please visit <http://www.pyinstaller.org/>
+
+InnoSetup 5.3.11 (or later), apowerful script based freeware installation builder for Windows. If you want to learn more please visit <http://www.jrsoftware.org/isinfo.php>
+
+InnoIDE 1.0.0.0051 (or later), a brand new interface for generating Microsoft Windows installations using InnoSetup. If you want to learn more please visit <http://www.innoide.org/>
+
+XEmacs 21.4 (patch 22) "Instant Classic" (or later), a highly customizable open source text editor and application development system. If you want to learn more please visit <htt://www.xemacs.org>
+
+IcoFX 1.6.4 (or later), a Freeware Icon Editor. If you want to learn more please visit <http://icofx.ro>
+
+MSYS 1.0.11 (or later), a contraction of "Minimal SYStem", is a Bourne Shell command line interpreter system. Offered as an alternative to Microsoft's cmd.exe, this provides a general purpose command line environment. If you want to learn more, please visit <http://www.mingw.org>
+
+Cygwin 1.7.7 (or later), a Linux-like environment for Windows. If you want to learn more please visit: <http://www.cygwin.com/>
+
+git 1.7.2.3 (or later), a free & open source, distributed version control system. If you want to learn more please visit <http://git-scm.com/>
+
+Windows XP SP3 (or later), an operating system developed by Microsoft. If you want to learn more please visit <http://www.microsoft.com>
+
+--------------------------------------
+
+Some of the programs or libraries mentioned above, do use other libraries and tools from the OpenSource world (like libpng, libjpeg, zlib and others). Although there is no direct usage of them in this program, credit has to be given to all the libraries and the authors that developed them.
+
+--------------------------------------
+Icons from the sets of icons have been used:
+
+FamFamFam Silk (licensed under Creative Commons Attribution 2.5 License). If you want to learn more please visit: <http://www.famfamfam.com/lab/icons/silk/>
+
+FamFamFam Flags (free for use for any purpose with no requirements for attribution) If you want to learn more please visit: <http://www.famfamfam.com/lab/icons/flags/>
+
+Lid Grid 2007 (Free for non-commercial use) If you want to learn more please visit <http://www.antdavidson.com>
+
+Sport Icon Set from the Nordic Factory (free, please link back to www.nordicfactory.com when using these icons) If you want to learn more please visit <http://www.nordicfactory.com>
+
+Icon from Everaldo.com (licensed under the LGPL - a copy should be found with this program - if you haven't received the copy, please visit <http://www.gnu.org/licenses/>) If you want to learn more please visit <http://www.everaldo.com/>
+
+Icon from Wikimedia (in the public domain, from Amada44). If you want to learn more please visit <http://commons.wikimedia.org>
+
+Icon from Zeus Box Studio. Released as Freeware. If you want to learn more please visit <http://www.zeusboxstudio.com>
+
